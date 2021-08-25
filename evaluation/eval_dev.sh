@@ -15,12 +15,12 @@ python src/gigaword/eval.py --pred ${PRED_FILE}  --gold ${TRUTH_FILE} --perl
 
 echo "BLEU/METER/CIDER/SPICE"
 cd ~/EKI-BART/TRAB-IKE/evaluation/Traditional/eval_metrics/
-~/anaconda3/envs/coco_score/bin/python eval.py --key_file ${INPUT_FILE} --gts_file ${TRUTH_FILE} --res_file ${PRED_FILE}
+python eval.py --key_file ${INPUT_FILE} --gts_file ${TRUTH_FILE} --res_file ${PRED_FILE}
 
 
 echo "Coverage"
 cd ~/EKI-BART/TRAB-IKE/evaluation/PivotScore
-~/anaconda3/envs/pivot_score/bin/python evaluate.py --pred ${PRED_FILE}   --ref ${TRUTH_FILE} --cs ${INPUT_FILE} --cs_str ~/data1/Commongen/final_data/commongen/commongen.dev.cs_str.txt
+python evaluate.py --pred ${PRED_FILE}   --ref ${TRUTH_FILE} --cs ${INPUT_FILE} --cs_str ~/data1/Commongen/final_data/commongen/commongen.dev.cs_str.txt
 
 
 
